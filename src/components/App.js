@@ -1,5 +1,6 @@
 //IMPORT ROUTER
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 
 //IMPORT COMPONENTS
 import BoasVindas from "./BoasVindas";
@@ -12,6 +13,9 @@ import "../assets/css/reset.css";
 import "../assets/css/style.css";
 
 export default function App() {
+
+    const [atualize, setAtualize] = React.useState(0);
+
     return (
         <BrowserRouter>
             <Routes>

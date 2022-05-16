@@ -28,6 +28,9 @@ export default function Zapgame() {
 
     //Lógica do footer
     const [footerFinalizada, setFooterFinalizada] = React.useState(0);
+
+    const [, updateState] = React.useState();
+    const forceUpdate = React.useCallback(() => updateState({}), []);
   
 
     //Lógica que vira a carta
@@ -43,7 +46,7 @@ export default function Zapgame() {
             <main>
                 {deck.map((card, index) => <Card pergunta={card.pergunta} resposta={card.resposta} resultado={resultado} index={index} key={index}/>)}
             </main>
-            <Footer resultado={resultado} deck={deck} setFooterFinalizada={setFooterFinalizada} footerFinalizada={footerFinalizada} />
+            <Footer resultado={resultado} deck={deck} setFooterFinalizada={setFooterFinalizada} footerFinalizada={footerFinalizada} forceUpdate={forceUpdate}/>
         </div>
     );
 
@@ -53,7 +56,7 @@ export default function Zapgame() {
 }
 
 //
-function Footer( {resultado, deck, setFooterFinalizada} ) {
+function Footer( {resultado, deck, setFooterFinalizada, forceUpdate} ) {
     let finalizou = true;
     if(resultado.length === deck.length) {
         finalizou = true;
@@ -76,7 +79,7 @@ function Footer( {resultado, deck, setFooterFinalizada} ) {
                     return emoji.verde;
                 } 
             })}
-            {() => setFooterFinalizada(finalizou)}
+            {forceUpdate}
         </footer>
 
     );  
