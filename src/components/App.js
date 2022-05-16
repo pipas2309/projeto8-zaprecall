@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //IMPORT COMPONENTS
 import BoasVindas from "./BoasVindas";
-import Game from "./Game";
 import Metas from "./Metas";
-
+import Decks from "./Decks";
+import Zapgame from "./Zapgame";
 
 //IMPORT CSS
 import "../assets/css/reset.css";
@@ -16,8 +16,9 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<BoasVindas />} />
-                <Route path="/starting" element={<Metas />} />
-                <Route path="/zapgame" element={<Game />} />
+                <Route path="/metas" element={<Metas />} />
+                <Route path="/decks" element={<Decks />} />
+                <Route path="/zapgame" element={<Zapgame />} />
             </Routes>
         </BrowserRouter>
     );

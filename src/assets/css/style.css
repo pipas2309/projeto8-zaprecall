@@ -139,3 +139,77 @@ body {
     border-radius: 5px;
 }
 /* TERMINA TELA DE META */
+
+
+/* COMEÇA TELA DE DECKS */
+.decks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.decks img {
+    width: 136px;
+    height: auto;
+}
+
+.decks h1 {
+    margin-top: 20px;
+    font-family: 'Righteous', cursive;
+    font-size: 36px;
+    color: white;
+    line-height: 44.7px;
+    text-align: center;
+    
+}
+
+.decks button {
+    width: 246px;
+    height: 54px;
+    margin-top: 18px;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: center;
+    color: #D70900;
+    background-color: white;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.decks select {
+    width: 246px;
+    height: 43px;
+    margin-top: 36px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    padding-left: 5px;
+}
+
+.decks input::placeholder {
+    color: #ADADAD;
+}
+
+.decks p {
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    text-shadow: 0 0 5px 5px red;
+}
+
+.decks .button-erro {
+    color: #000000;
+    background-color: rgb(95, 95, 95);
+    border: 1px solid #3a3a3a;
+    box-shadow: 0px 4px 4px rgba(255, 0, 0, 0.644);
+    border-radius: 5px;
+}
+/* TERMINA TELA DE DECKS */
