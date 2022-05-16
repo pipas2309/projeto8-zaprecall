@@ -1,7 +1,5 @@
-//ROUTER
+//ROUTER - REACK
 import { Link } from 'react-router-dom';
-
-//REACT
 import React from 'react';
 
 //IMPORT CSS & MEDIA

@@ -34,9 +34,9 @@ export default function Decks() {
             <select value={deck} onChange={deck => setDeck(deck.target.value)}>
                 <option value="" disabled selected>Escolha seu deck Zap!</option>
                 <option value={1}>Padrão</option>
-                <option value={2}>Padrão</option>
-                <option value={3}>Padrão</option>
-                <option value={4}>Padrão</option>
+                <option value={2}>Quem é esse Pokemon</option>
+                <option value={3}>Narutin</option>
+                <option value={4}>Pirata que estica</option>
             </select>
             {console.log(deck)}
             {temAviso ? aviso : 

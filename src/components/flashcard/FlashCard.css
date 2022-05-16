@@ -1,0 +1,26 @@
+.flashcard {
+    position: relative;
+    width: 300px;
+    height: 131px;
+    background-color: #FFFFD5;
+    margin-top: 23px;
+    padding: 18px 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flashcard h5{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #333333;
+}
+
+.flashcard img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    bottom: 15px;
+    right: 18px;
+}
