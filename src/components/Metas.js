@@ -30,7 +30,7 @@ export default function BoasVindas () {
             <h1>ZapRecall</h1>
             <input type="number" value={meta} onInput={input => setMeta(input.target.value)} placeholder="Digite sua meta de zaps..."/>
             {temAviso ? aviso : 
-            <Link to="/decks">
+            <Link to="/decks" state={{meta: meta}}>
                 <button>Avançar</button>
             </Link>
             }

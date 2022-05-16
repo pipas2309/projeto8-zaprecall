@@ -15,10 +15,10 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<BoasVindas />} />
-                <Route path="/metas" element={<Metas />} />
-                <Route path="/decks" element={<Decks />} />
-                <Route path="/zapgame" element={<Zapgame />} />
+                <Route exact path="/" element={<BoasVindas />} />
+                <Route exact path="/metas" element={<Metas />} />
+                <Route exact path="/decks" element={<Decks />} />
+                <Route exact path="/zapgame" element={<Zapgame />} />
             </Routes>
         </BrowserRouter>
     );

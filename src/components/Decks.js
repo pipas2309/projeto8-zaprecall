@@ -1,7 +1,6 @@
-//ROUTER
+//ROUTER - REACK
 import { Link } from 'react-router-dom';
-
-//REACT
+import { useLocation } from "react-router-dom";
 import React from 'react';
 
 //IMPORT CSS & MEDIA
@@ -10,6 +9,7 @@ import logo from '../assets/media/logo.png';
 
 export default function Decks() {   
     const [deck, setDeck] = React.useState('');
+    let meta = useLocation().state;
     let temAviso = true; 
     //UI DO AVISO SE META ERRADA
     const aviso = (
@@ -40,7 +40,7 @@ export default function Decks() {
             </select>
             {console.log(deck)}
             {temAviso ? aviso : 
-            <Link to="/zapgame">
+            <Link to="/zapgame" state={{ deck: deck, meta: meta.meta}}>
                 <button>Iniciar Recall!</button>
             </Link>
             }
