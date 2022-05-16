@@ -26,6 +26,118 @@ export default function Decks() {
         temAviso = false;
     }
 
+    //DECKS
+    const decks = [
+        {
+            id: 1,
+            pergunta: 'O que é JSX?',
+            resposta: 'Uma extensão de linguagem do JavaScript'
+        }, {
+            id: 1,
+            pergunta: 'O React é...',
+            resposta: 'uma biblioteca JavaScript para construção de interfaces'
+        }, {
+            id: 1,
+            pergunta: 'Componentes devem iniciar com...',
+            resposta: 'letra maiúscula'
+        }, {
+            id: 1,
+            pergunta: 'Podemos colocar ... dentro do JSX',
+            resposta: 'expressões'
+        }, {
+            id: 1,
+            pergunta: 'O ReactDOM nos ajuda...',
+            resposta: 'interagindo com a DOM para colocar componentes React na mesma'
+        }, {
+            id: 1,
+            pergunta: 'Usamos o npm para...',
+            resposta: 'gerenciar os pacotes necessários e suas dependências'
+        }, {
+            id: 1,
+            pergunta: 'Usamos props para...',
+            resposta: 'passar diferentes informações para componentes'
+        }, {
+            id: 1,
+            pergunta: 'Usamos estado (state) para...',
+            resposta: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente'
+        },
+        {
+            id: 2,
+            pergunta: 'O que é JSX?',
+            resposta: 'Uma extensão de linguagem do JavaScript'
+        }, {
+            id: 2,
+            pergunta: 'O React é...',
+            resposta: 'uma biblioteca JavaScript para construção de interfaces'
+        }, {
+            id: 2,
+            pergunta: 'Componentes devem iniciar com...',
+            resposta: 'letra maiúscula'
+        }, {
+            id: 2,
+            pergunta: 'Podemos colocar ... dentro do JSX',
+            resposta: 'expressões'
+        }, {
+            id: 3,
+            pergunta: 'O que é JSX?',
+            resposta: 'Uma extensão de linguagem do JavaScript'
+        }, {
+            id: 3,
+            pergunta: 'O React é...',
+            resposta: 'uma biblioteca JavaScript para construção de interfaces'
+        }, {
+            id: 3,
+            pergunta: 'Componentes devem iniciar com...',
+            resposta: 'letra maiúscula'
+        }, {
+            id: 3,
+            pergunta: 'Podemos colocar ... dentro do JSX',
+            resposta: 'expressões'
+        }, {
+            id: 3,
+            pergunta: 'O ReactDOM nos ajuda...',
+            resposta: 'interagindo com a DOM para colocar componentes React na mesma'
+        }, {
+            id: 3,
+            pergunta: 'Usamos o npm para...',
+            resposta: 'gerenciar os pacotes necessários e suas dependências'
+        }, {
+            id: 3,
+            pergunta: 'Usamos props para...',
+            resposta: 'passar diferentes informações para componentes'
+        }, {
+            id: 4,
+            pergunta: 'O que é JSX?',
+            resposta: 'Uma extensão de linguagem do JavaScript'
+        }, {
+            id: 4,
+            pergunta: 'O React é...',
+            resposta: 'uma biblioteca JavaScript para construção de interfaces'
+        }, {
+            id: 4,
+            pergunta: 'Componentes devem iniciar com...',
+            resposta: 'letra maiúscula'
+        }, {
+            id: 4,
+            pergunta: 'Podemos colocar ... dentro do JSX',
+            resposta: 'expressões'
+        }, {
+            id: 4,
+            pergunta: 'O ReactDOM nos ajuda...',
+            resposta: 'interagindo com a DOM para colocar componentes React na mesma'
+        }, {
+            id: 4,
+            pergunta: 'Usamos o npm para...',
+            resposta: 'gerenciar os pacotes necessários e suas dependências'
+        }
+    ]
+    embaralhar(decks);
+
+    function embaralhar(array){
+        array.sort(()=> Math.random() - 0.5);
+        return array;
+    }
+
     //UI
     return (
         <div className="decks">
@@ -40,7 +152,7 @@ export default function Decks() {
             </select>
             {console.log(deck)}
             {temAviso ? aviso : 
-            <Link to="/zapgame" state={{ deck: deck, meta: meta.meta}}>
+            <Link to="/zapgame" state={{ deck: deck, meta: meta.meta, decks: decks }}>
                 <button>Iniciar Recall!</button>
             </Link>
             }
