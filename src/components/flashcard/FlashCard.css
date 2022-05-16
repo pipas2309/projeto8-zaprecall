@@ -1,7 +1,7 @@
 .flashcard {
     position: relative;
     width: 300px;
-    height: 131px;
+    min-height: 131px;
     background-color: #FFFFD5;
     margin-top: 23px;
     padding: 18px 15px;
@@ -23,4 +23,43 @@
     position: absolute;
     bottom: 15px;
     right: 18px;
+    cursor: pointer;
+}
+
+.flashcard .resposta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flashcard .resposta button {
+    width: 86px;
+    max-height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.flashcard .resposta .vermelho {
+    background-color: #FF3030;
+}
+
+.flashcard .resposta .laranja {
+    background-color: #FF922E;
+}
+
+.flashcard .resposta .verde {
+    background-color: #2FBE34;
+}
+
+.flashcard .resposta .vermelho .escuro {
+    opacity: 0.5;
 }
